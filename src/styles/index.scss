@@ -1,0 +1,121 @@
+@font-face {
+	font-family: Montserrat;
+	src: url(../assets/fonts/Montserrat-Regular.ttf);
+}
+@mixin style1{
+	font-family: 'Montserrat';
+	font-style: normal;
+	letter-spacing: 0.04em;
+	/*font-weight: $font-weight;
+	font-size: $font-size;
+	line-height: $line-height;*/
+}
+
+$purple: #371030;
+$white: #FBF7F6;
+$red: #9A3C48;
+$btn-pink: #DE8E98;
+$btn-pink-h:#FC9FAB;
+$btn-pink-a:#FE95A2;
+
+:root{
+	margin: 0;
+	padding: 0;
+}
+
+.form__block{
+	width: 808px;
+	height: 351px;
+	display: flex;
+	background: $white;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+	border-radius: 15px;
+	z-index: 2;
+	overflow: hidden;
+	
+	&-text{
+		display: block;
+		width: 404px;
+		margin-left: 40px;
+		&>h2{
+			display: block;
+			@include style1();
+			font-weight: 700;
+			font-size: 15px;
+			line-height: 18px;
+			height: 54px;
+			width: 324px;
+			text-align: left;
+			color: $purple
+		}	
+		form.form-example1{
+			input{
+				border-top-style: hidden;
+				border-right-style: hidden;
+				border-left-style: hidden;
+				border-bottom-style: groove;
+				background-color: $white; }
+			& button{
+				width: 324px;
+				height: 55px;
+				background: #FFB0BA;
+				box-shadow: 3px 3px 0px 3px $btn-pink;
+				border-radius: 100px;
+				border: none;
+				color: $red;
+				@include style1();
+				font-weight: 900;
+				font-size: 20px;
+				line-height: 24px;
+				text-align: center;
+				
+				&:hover{
+					background: #FC9FAB;
+				}
+				&:active{
+					background: #FE95A2;
+				}
+			}
+			#name,#phone,#email,#commentary{
+				display: inline-block;
+				@include style1();
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 20px;
+				color: $purple;
+			}
+			#name{
+				margin: 0;
+				padding: 0;
+				margin-right: 36px;
+				margin-bottom: 21px;
+				width: 144px;
+			}
+			#phone{
+				margin: 0;
+				padding: 0;
+				width: 144px;
+			}
+			
+			#email, #commentary{
+				margin-bottom: 21px;
+				width: 324px;
+			}
+		}
+		
+	}
+
+	&-pic{
+		display: block;
+		position: relative;
+		background-image: url(../assets/images/form1.svg);
+		height: 351px;
+		width: 405px;
+		z-index: 1;
+	}
+}
+
+
+
+
+
